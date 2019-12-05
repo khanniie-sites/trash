@@ -17,62 +17,34 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <div id="overlay" class="hidden">
-      <div id="overlay-container">
-        <div id="image-selection">
-          select an image
-          <input type="file" />
-          <br />
-          <img id="myImg" src="#" alt="" />
-          <br />
-          <button id="continue-to-letter">
-            continue
-          </button>
-        </div>
-        <div id="letter" class="hidden">
-          <canvas id="letter-canvas"></canvas>
-          <div id="letter-info">
-            <div class="info-cols">
-              dots:
-              <br />
-              dots are encoded as XY coordinates.
-              <ol id="dot-list"></ol>
-            </div>
-            <div class="info-cols">
-              lines:
-              <br />
-              Lines are encoded as a pair of dot indexes representing the dots
-              they connect.
-              <ol id="line-list"></ol>
-            </div>
-          </div>
-          <div class="stickynote" id="dot-note">
-            <p style="margin-bottom: 12px;">
-              Place dots at the important points of your image.
-            </p>
-            <button id="move-to-lines">I'm done making dots!</button>
-          </div>
-          <div class="stickynote hidden" id="line-note">
-            <p style="margin-bottom: 12px;">
-              Connect the dots.
-            </p>
-            <button id="finish-lines">I'm done connecting!</button>
-          </div>
-        </div>
-        <div id="nav-buttons">
-          <button id="exit">
-            exit
-          </button>
-        </div>
+    <div id="header">
+      <img src="logo.png" id="logo"/>
+      <div id="nav-elements">
+        <div>Getting Started</div>
+        <div>Current Groups</div>
+        <div>Browse</div>
+        <div>Create</div>
       </div>
     </div>
-    <div id="center-container">
-      <canvas id="background-canvas"></canvas>
+    <div id="image-container">
+      <img src="" id="trash-image"/>
+      <input type="file">
     </div>
-
-    <footer>
-      Made by <a href="https://miyehn.me/">Rain</a> and
-      <a href="https://connieye.com">Connie</a>!
-    </footer>
+    <div id="content">
+      <h1>Create a new clean up drive</h1>
+      <hr/>
+      <div id="floater">
+        <p>Which street would you like to clean?</p>
+        <input type="text" value="(auto detected) Craig Street, Room 407"/>
+        <p>When should the movement happen?</p>
+        <input type="date">
+        <p>How many people are required for this cleanup?</p>
+        <input type="text" placeholder="30 participants"/>
+        <p>When should Waste Management pick up the trash?</p>
+        <input type="date">
+        <p><input type="checkbox"/>We need gloves and vests</p>
+        <button id="createbutton">CREATE</button>
+      </div>
+    </div>
   </body>
 </html>
