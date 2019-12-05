@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create movement</title>
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div id="overlay" class="hidden">
+      <div id="overlay-container">
+        <div id="image-selection">
+          select an image
+          <input type="file" />
+          <br />
+          <img id="myImg" src="#" alt="" />
+          <br />
+          <button id="continue-to-letter">
+            continue
+          </button>
+        </div>
+        <div id="letter" class="hidden">
+          <canvas id="letter-canvas"></canvas>
+          <div id="letter-info">
+            <div class="info-cols">
+              dots:
+              <br />
+              dots are encoded as XY coordinates.
+              <ol id="dot-list"></ol>
+            </div>
+            <div class="info-cols">
+              lines:
+              <br />
+              Lines are encoded as a pair of dot indexes representing the dots
+              they connect.
+              <ol id="line-list"></ol>
+            </div>
+          </div>
+          <div class="stickynote" id="dot-note">
+            <p style="margin-bottom: 12px;">
+              Place dots at the important points of your image.
+            </p>
+            <button id="move-to-lines">I'm done making dots!</button>
+          </div>
+          <div class="stickynote hidden" id="line-note">
+            <p style="margin-bottom: 12px;">
+              Connect the dots.
+            </p>
+            <button id="finish-lines">I'm done connecting!</button>
+          </div>
+        </div>
+        <div id="nav-buttons">
+          <button id="exit">
+            exit
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="center-container">
+      <canvas id="background-canvas"></canvas>
+    </div>
+
+    <footer>
+      Made by <a href="https://miyehn.me/">Rain</a> and
+      <a href="https://connieye.com">Connie</a>!
+    </footer>
+  </body>
+</html>
